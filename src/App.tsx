@@ -5,6 +5,7 @@ import ApplyVisa from "./pages/ApplyVisa";
 import Review from "./pages/Review";
 import Success from "./pages/Success";
 import PassportFormPage from "./pages/PassportFormPage";
+import UserList from "./pages/UserList";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/review" element={<Review />} />
         <Route path="/success" element={<Success />} />
         <Route path="/apply_passport" element={<PassportFormPage />} />
+        <Route path="/users" element={<UserList/>} />
       </Routes>
     </BrowserRouter>
   );
