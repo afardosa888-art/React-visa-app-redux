@@ -72,6 +72,17 @@
 // export default UserList;
 
 import { useEffect, useState } from "react";
+interface Person {
+  name: string;
+  age: number;
+  email: string
+}
+
+const person: Person = {
+  name: "Sara",
+  age: 22,
+  email:"fardosa@123",
+};
 
 function UserList() {
   const [name, setName] = useState("");
@@ -81,10 +92,28 @@ function UserList() {
     console.log("Name or age changed");
   }, [name, age]);
 
+// function add(a: number, b: number): number {
+//   return a   +  b;
+// }
+  
+  
+  // function joinFirstAndLastName(firstName: string, lastName: string):  void{
+    // console.log(firstName  +  "  "  +  lastName) 
+  // }
+  
+  //  joinFirstAndLastName("faduma", "maria")
+
+
+
+
   return (
     <div>
       <input onChange={(e) => setName(e.target.value)} />
       <button onClick={() => setAge(age + 1)}>Age {age}</button>
+      <br />
+      {person.name}
+      {person.age}
+      {person.email}
     </div>
   );
 } 
